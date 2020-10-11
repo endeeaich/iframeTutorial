@@ -5,23 +5,20 @@
         <meta charset="UTF-8"> 
 </head>
 <body onload="checkFrameSource()">
-<!--
+
 <iframe id="myIframe" src="www.google.com" width="728" height="410" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true">
 </iframe>
--->
-	<h1 id = "myIframe"></h>
+
 
 <script>
 function checkFrameSource() {
-	//https://embedstream.me/cbs-stream-1
 	var loc = window.location.toString(),
 		newURL = loc.split('=')[1],
 		iframe = document.getElementById('myIframe');
 		
 	newURL = newURL ? newURL : "https://www.youtube.com/embed/s4BibernJxU";
 
-	//iframe.src = newURL;
-	iframe.html = newURL;
+	iframe.src = newURL;
 }
 </script>
 
